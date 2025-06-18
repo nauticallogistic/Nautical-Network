@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nautical Network - Logistics Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="logo-container">
+                <img src="https://via.placeholder.com/40x40" alt="Nautical Network Logo" class="logo">
+                <h1>Nautical Network</h1>
+            </div>
+            <div class="language-switcher">
+                <select id="language-selector">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="si">🇱🇰 සිංහල</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will appear here -->
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>Welcome to Nautical Network! How can I assist you with your logistics needs today?</p>
+                    <div class="quick-replies">
+                        <button class="quick-reply">Track Order</button>
+                        <button class="quick-reply">Schedule Delivery</button>
+                        <button class="quick-reply">Check Inventory</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <div class="input-tools">
+                <button id="file-upload-btn" title="Upload Document">
+                    <i class="fas fa-paperclip"></i>
+                    <input type="file" id="file-upload" accept=".pdf,.jpg,.jpeg,.png,.docx,.xlsx" style="display: none;">
+                </button>
+                <button id="location-btn" title="Share Location">
+                    <i class="fas fa-map-marker-alt"></i>
+                </button>
+            </div>
+            <div class="typing-indicator" id="typing-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+                <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
